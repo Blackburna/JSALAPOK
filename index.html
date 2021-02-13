@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>JavaScript Alapok</title>
+    <link rel="shortcut icon" href="kepek/js.png" type="image/png">
+    <link rel="stylesheet" href="stilus.css">
+</head>
+<body class="bg-primary bg-gradient">
+    <div id="oldal" class="container container-fluid-sm bg-gradient mt-1 pt-3">
+
+    <!--Fejléc-->    
+    <header>
+        <h2 class="text-center">Mit tud a JavaScript?</h2>
+        <button class="btn btn-block btn-outline-primary btn-sm" type="button" onclick="alert('Az oldalt készítette: Jancsik István Péter');">Szerző</button>
+        <button class="btn btn-block btn-outline-primary btn-sm" type="button" onclick="window.print()">Oldal nyomtatása</button>
+        <br>
+        <div class="text-center">
+            <button class="btn btn-outline-primary btn-sm" type="button" onclick="sotetMod()">Nappali mód</button>
+            <button class="btn btn-outline-primary btn-sm" type="button" onclick="vilMod()">Éjszakai mód</button>
+        </div>
+        <hr>
+    </header>
+
+    <div>
+        <button class="btn btn-outline-primary btn-sm" type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+        Mai dátum és idő megjelenítése</button>
+        <button class="btn btn-outline-primary btn-sm" type="button"
+        onclick="document.getElementById('demo').innerHTML =''"> Dátum törlése</button>
+        <p id="demo"></p>
+        <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst" target="_blank"><img class="img-fluid border border-success" src="kepek/w3kicsi.png" alt="w3schools oldala" title="Ugrás a W3schools oldalára"></a>
+        <hr>
+    </div>
+    <div>
+        <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById
+        ('villkorte').src='kepek/kortebe.gif'">Kapcsold fel!</button>
+        <img id="villkorte" src="kepek/korteki.gif" alt="Villanykörte" style="width:100px">
+        <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById
+        ('villkorte').src='kepek/korteki.gif'">Kapcsold le!</button><br>
+        <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_lightbulb" target="_blank"><img class="img-fluid border border-success" src="kepek/w3kicsi.PNG" alt="w3schools oldala" title="Ugrás a W3schools oldalára"></a>
+        <p></p>
+        <hr>
+    </div>
+    <div>
+        <h3>JavaScript megváltoztatja a HTML elemek stílusát.</h3>
+        <p id="modositando">Megváltoztathatod a bekezdésed kinézetét.</p>
+            <button class="btn btn-outline-primary btn-sm" type="button" onclick="document.getElementById('modositando').style.fontSize='25px'">Betűméret</button>
+            <button class="btn btn-outline-primary btn-sm" type="button" onclick="document.getElementById('modositando').style.color='#0073e5'">Betűszín</button>
+            <button class="btn btn-outline-primary btn-sm" type="button" onclick="document.getElementById('modositando').style.fontFamily='Verdena'">Betűtípus</button>
+            <button class="btn btn-outline-primary btn-sm" type="button" onclick="document.getElementById('modositando').style.border='2px dashed #0073e5'">Szegély</button>
+            <button class="btn btn-outline-primary btn-sm" type="button" onclick="document.getElementById('modositando').style.padding='10px'">Belső margó</button>
+            <button class="btn btn-outline-primary btn-sm" type="button" onclick="document.getElementById('modositando').style.margin='10 px auto'">Külső margó</button>
+            <button class="btn btn-outline-primary btn-sm" type="button" onclick="document.getElementById('modositando').style.backgroundColor='rgba(0,2,140,0.50'">Háttérszín</button><br>
+        <p></p>
+        <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_style" target="_blank"><img class="img-fluid border border-success" src="kepek/w3kicsi.png" alt="w3schools oldala" title="Ugrás a W3schools oldalára"></a>
+    <hr>
+    </div>
+    </div>
+<script>
+
+function sotetMod(){
+    document.getElementById('oldal').style.backgroundColor='black';
+    document.getElementById('oldal').style.color='white'
+}
+function vilMod(){
+    document.getElementById('oldal').style.backgroundColor='white';
+    document.getElementById('oldal').style.color='black'
+}
+</script>
+
+</body>
+</html>
